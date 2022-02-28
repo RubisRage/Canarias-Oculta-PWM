@@ -1,0 +1,38 @@
+#navbar {
+    list-style-type: none;
+    width: 100vw;
+    box-sizing: border-box;
+    background-color: #0077C8;
+    overflow: hidden;
+    border: 0;
+    position: fixed;
+    top: 0;
+    padding: 0;
+    margin-left: -8px;
+    margin-top: 0;
+}
+
+#navbar li {
+    display: inline;
+    float: right;
+}
+
+#navbar li:first-child{
+    float: left;
+}
+
+#navbar li a {
+    color: white;
+    display: block;
+    padding: 30px 30px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.dropdown {
+    display: none;
+}
+
+.dropdown-btn:hover .dropdown {
+    display: block;
+}
