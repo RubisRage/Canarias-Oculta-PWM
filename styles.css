@@ -68,3 +68,26 @@ body {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+.searchForm {
+    border: solid;
+    overflow: hidden;
+    margin: 1em;
+    padding: 1em;
+}
+
+.searchForm ul {
+    list-style: none;
+    margin: 1em;
+    padding: 0;
+}
+
+.searchForm h3 {
+    text-align: center;
+    margin: 1em;
+    background-color: #0077C8;
+}
+
+.searchForm div {
+    float: left;
+}
