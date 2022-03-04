@@ -11,7 +11,7 @@
     <a href="#">Logo</a>
     <a style="float:right" href="#">Usuario</a>
     <div style="float:right" class="dropdown">
-        <button  class="dropbtn">Islas
+        <button class="dropbtn">Islas
             <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
@@ -28,63 +28,73 @@
 </div>
 
 <section>
-   <form class="searchForm">
-       <div>
+    <form class="searchForm">
+        <div class="filterMenu">
 
-           <h3>Categoría</h3>
-       <ul>
-           <li><input type="checkbox">Gastronomía</li>
-           <li><input type="checkbox">Playa</li>
-           <li><input type="checkbox">Senderismo</li>
-           <li><input type="checkbox">Montaña</li>
-       </ul>
-       </div>
-       <div>
-       <h3>Islas</h3>
-       <ul>
-           <li><input type="checkbox"><label>El Hierro</label></li>
-           <li><input type="checkbox"><label>La Palma</label></li>
-           <li><input type="checkbox"><label>La Gomera</label></li>
-           <li><input type="checkbox"><label>Tenerife</label></li>
-           <li><input type="checkbox"><label>Gran Canaria</label></li>
-           <li><input type="checkbox"><label>Lanzarote</label></li>
-           <li><input type="checkbox"><label>Fuerteventura</label></li>
-           <li><input type="checkbox"><label>La Graciosa</label></li>
-       </ul>
-       </div>
+            <h3>Categoría</h3>
+            <ul>
+                <li><label><input type="checkbox">Gastronomía</li>
+                <li><label><input type="checkbox">Playa</li>
+                <li><label><input type="checkbox">Senderismo</li>
+                <li><label><input type="checkbox">Montaña</li>
+            </ul>
+        </div>
+        <div class="filterMenu">
+            <h3>Islas</h3>
+            <ul>
+                <li><label><input type="checkbox">El Hierro</label></li>
+                <li><label><input type="checkbox">La Palma</label></li>
+                <li><label><input type="checkbox">La Gomera</label></li>
+                <li><label><input type="checkbox">Tenerife</label></li>
+                <li><label><input type="checkbox">Gran Canaria</label></li>
+                <li><label><input type="checkbox">Lanzarote</label></li>
+                <li><label><input type="checkbox">Fuerteventura</label></li>
+                <li><label><input type="checkbox">La Graciosa</label></li>
+            </ul>
+        </div>
 
-       <label>Desde:</label>
-       <select>
-           <option value="0">0 €</option>
-           <option value="10">10 €</option>
-           <option value="20">20 €</option>
-           <option value="30">30 €</option>
-           <option value="40">40 €</option>
-           <option value="50">50 € o más</option>
-       </select>
+        <div class="filterMenu">
+            <h3>Coste</h3>
 
-       <label>Hasta:</label>
-       <select>
-           <option value="0">0 €</option>
-           <option value="10">10 €</option>
-           <option value="20">20 €</option>
-           <option value="30">30 €</option>
-           <option value="40">40 €</option>
-           <option value="50">50 € o más</option>
-       </select>
+            <div class="dropdown-menu">
+                <label>Desde:</label>
+                <select>
+                    <option value="0">0 €</option>
+                    <option value="10">10 €</option>
+                    <option value="20">20 €</option>
+                    <option value="30">30 €</option>
+                    <option value="40">40 €</option>
+                    <option value="50">50 € o más</option>
+                </select>
+            </div>
 
-       <label>Valoración:</label>
-       <select>
-           <option value="0">0 estrellas</option>
-           <option value="1">1 estrellas</option>
-           <option value="2">2 estrellas</option>
-           <option value="3">3 estrellas</option>
-           <option value="4">4 estrellas</option>
-           <option value="5">5 estrellas</option>
-       </select>
+            <div class="dropdown-menu">
+                <label>Hasta:</label>
+                <select>
+                    <option value="0">0 €</option>
+                    <option value="10">10 €</option>
+                    <option value="20">20 €</option>
+                    <option value="30">30 €</option>
+                    <option value="40">40 €</option>
+                    <option value="50">50 € o más</option>
+                </select>
+            </div>
+        </div>
 
-       <input type="submit">
-   </form>
+        <div class="filterMenu">
+            <h3>Valoración</h3>
+            <select>
+                <option value="0">0 estrellas</option>
+                <option value="1">1 estrellas</option>
+                <option value="2">2 estrellas</option>
+                <option value="3">3 estrellas</option>
+                <option value="4">4 estrellas</option>
+                <option value="5">5 estrellas</option>
+            </select>
+        </div>
+        <div class="flexBreak"></div>
+        <button class="submitBtn" type="submit">Buscar</button>
+    </form>
 </section>
 
 </body>
