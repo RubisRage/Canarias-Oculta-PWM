@@ -74,33 +74,36 @@ body {
     overflow: hidden;
     margin: 1em;
     padding: 1em;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.searchForm .submitBtn {
-    position: relative;
-    left: 70%;
-    font-size: 1.5em;
-    padding: 0.3em 0.5em;
-}
-
-
-.flexBreak {
-    flex-basis: 100%;
+    display: grid;
+    gap: 1vw;
+    justify-content: space-around;
 }
 
 .filterMenu {
     font-size: 1.5em;
-    align-self: flex-start;
+    width: 15vw;
 }
-
 
 .filterMenu ul {
     list-style: none;
     margin: 1em;
     padding: 0;
+}
+
+.dropdown-menu {
+    margin: 1vw;
+    display: grid;
+}
+
+.dropdown-menu label {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.dropdown-menu select {
+    font-size: 0.8em;
+    grid-column: 2;
+    grid-row: 1;
 }
 
 .filterMenu input[type=checkbox] {
@@ -110,10 +113,46 @@ body {
     vertical-align: middle;
 }
 
-.filterMenu .dropdown-menu {
-}
-
 .filterMenu h3 {
     text-align: center;
-    background-color: #0077C8;
+    background-color: #22AAFB;
+    width: 100%;
 }
+
+.categorySelector {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+}
+
+.islandSelector {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+}
+
+.costSelector {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.scoreSelector {
+    grid-column: 4;
+    grid-row: 1;
+}
+
+.submitBtn {
+    grid-column: 3 / span 2;
+    grid-row: 2;
+    margin: 4vh 8vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
