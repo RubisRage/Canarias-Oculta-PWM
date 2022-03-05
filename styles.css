@@ -2,9 +2,8 @@
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
-    src:
-            local('Montserrat'),
-            url('/fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+    src: local('Montserrat'),
+    url('/fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
 }
 
 body {
@@ -86,8 +85,9 @@ footer {
 }
 
 #imgHeader {
-    width: 100%;
+    width: 100vw;
 }
+
 /*
     Blue: #0077C8
     Yellow: #F1C400
@@ -135,7 +135,7 @@ footer {
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
