@@ -157,6 +157,24 @@ footer {
     display: block;
 }
 
+
+.longArticle {
+    clear: both;
+    display: table;
+    text-align: center;
+}
+
+.longArticle > p{
+    text-align: left;
+}
+
+.longArticle > img {
+    margin: 2em;
+    border-radius: 15px;
+    float: right;
+    width: 30%;
+}
+
 .searchForm {
     border: solid 0.1em;
     float: left;
@@ -392,5 +410,3 @@ article.articleResumeSmall {
     margin: 2em;
     align-self: flex-start;
 }
-
-
