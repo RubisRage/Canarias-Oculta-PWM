@@ -27,7 +27,7 @@ main {
 }
 
 
-.mainIslandPage > aside {
+.verticalNavBar {
     border: 0.1vw solid black;
     float: left;
     display: block;
@@ -274,7 +274,74 @@ footer {
     float: none;
 }
 
+.carousel {
+    overflow: hidden;
+    position: relative;
+}
 
+.carousel img {
+    text-align: center;
+    background-color: grey;
+    width: 100vw;
+    display: block;
+}
+
+.carousel .next, .prev {
+    position: absolute;
+    top: 40%;
+    font-size: 2.5em;
+    color: white;
+    padding: 0.5em;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.next:hover, .prev:hover {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.carousel .next {
+    right: 0;
+    border-bottom-left-radius: 0.5em;
+    border-top-left-radius: 0.5em;
+}
+
+.carousel .prev {
+    border-bottom-right-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+}
+
+.carouselItem div {
+    position: absolute;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 33vh;
+    padding-top: 0.5em;
+    padding-left: 1em;
+    width: 60%
+}
+
+article.articleResumeSmall {
+    width: 25vw;
+    font-size: 1em;
+}
+
+.articleResume {
+    font-size: 1.5em;
+    float: left;
+    width: 60vw;
+    margin-top: 3vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    padding: 0.5vw;
+}
+
+.articleResume:hover {
+    background-color: #FFD511;
+}
+
+.articleResume img {
+    width: 100%;
+}
 
 
 
