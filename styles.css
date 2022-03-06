@@ -274,8 +274,37 @@ footer {
     float: none;
 }
 
+.profileInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3em;
+}
 
+.profileInfo img {
+    display: block;
+    width: 25vw;
+    height: 25vw;
+    line-height: 25vw;
+    text-align: center;
+    background-color: grey;
+    border-radius: 25vw;
+}
 
+.profileInfo h1 {
+    text-align: center;
+}
+
+.profileDetails {
+    display: grid;
+    gap: 2em;
+    border: 1px solid black;
+    padding: 2em;
+}
+
+.profileInfo {
+
+}
 
 
 
