@@ -26,7 +26,8 @@ main {
     position: relative;
 }
 
-aside {
+
+.mainIslandPage > aside {
     border: 0.1vw solid black;
     float: left;
     display: block;
@@ -43,7 +44,7 @@ aside ul {
     padding: 0;
 }
 
-article {
+.mainIslandPage > article {
     text-align: center;
     width: 80vw;
     padding: 2em;
@@ -52,7 +53,7 @@ article {
     float: right;
 }
 
-section {
+.shortArticle > section {
     text-align: center;
     display: inline;
     float: right;
