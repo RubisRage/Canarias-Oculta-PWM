@@ -8,7 +8,6 @@
 body {
     font-family: Montserrat, sans-serif;
     min-height: 100vh;
-    padding-bottom: 3em;
     margin: 0;
 }
 
@@ -65,12 +64,14 @@ aside ul {
 }
 
 footer {
-    width: 100%;
-    bottom: 0;
-    position: absolute;
-    display: block;
+    width: 100vw;
     text-align: center;
-    background: lightgray;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 0;
 }
 
 .imgArticle {
