@@ -164,7 +164,7 @@ footer {
     text-align: center;
 }
 
-.longArticle > p{
+.longArticle > p {
     text-align: left;
 }
 
@@ -292,6 +292,7 @@ footer {
     margin: 0;
     float: none;
 }
+
 
 .carousel {
     overflow: hidden;
