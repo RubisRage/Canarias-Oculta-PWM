@@ -2,16 +2,12 @@
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
-    src:
-            local('Montserrat'),
-            url('/fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+    src: local('Montserrat'), url('/fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
 }
 
 body {
-    font-family: Montserrat;
-    position: relative;
+    font-family: Montserrat, sans-serif;
     min-height: 100vh;
-    padding-bottom: 3em;
     margin: 0;
 }
 
@@ -23,37 +19,40 @@ header {
 }
 
 main {
-    border: 5px solid yellow;
     width: 100%;
-    height: 70%;
+    height: 100%;
     display: inline-block;
     position: relative;
 }
 
-aside {
-    border: 5px solid green;
+
+.verticalNavBar {
+    border: 0.1vw solid black;
     float: left;
     display: block;
-    width: 10%;
+    width: 10vw;
+    height: 100%;
     padding: 1.5em;
-    margin-top: 1em;
+    margin: 1em;
     text-decoration: none;
     text-align: center;
-    position: absolute;
 }
 
-article {
-    border: 5px solid fuchsia;
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mainIslandPage > article {
     text-align: center;
-    height: 70%;
-    width: 80%;
+    width: 80vw;
     padding: 2em;
     margin: 1em;
     display: block;
     float: right;
 }
 
-section {
+.shortArticle > section {
     text-align: center;
     display: inline;
     float: right;
@@ -65,12 +64,14 @@ section {
 }
 
 footer {
-    width: 100%;
-    bottom: 0;
-    position: absolute;
-    display: block;
+    width: 100vw;
     text-align: center;
-    background: lightgray;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 0;
 }
 
 .imgArticle {
@@ -86,15 +87,15 @@ footer {
 }
 
 #imgHeader {
-    width: 100%;
+    width: 100vw;
 }
+
 /*
     Blue: #0077C8
     Yellow: #F1C400
     Light blue: #22AAFB
     Light yellow: #FFD511
 */
-
 
 .navbar {
     overflow: hidden;
@@ -135,7 +136,7 @@ footer {
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
@@ -156,6 +157,7 @@ footer {
     display: block;
 }
 
+
 .longArticle {
     clear: both;
     display: table;
@@ -171,4 +173,240 @@ footer {
     border-radius: 15px;
     float: right;
     width: 30%;
+}
+
+.searchForm {
+    border: solid 0.1em;
+    float: left;
+    padding: 1em;
+    margin: 1em;
+    width: 80vw;
+
+    overflow: hidden;
+    display: grid;
+    gap: 1vw;
+    justify-content: space-around;
+}
+
+.filterMenu {
+    font-size: 1.5em;
+    width: 15vw;
+}
+
+.filterMenu ul {
+    list-style: none;
+    margin: 1em;
+    padding: 0;
+}
+
+.dropdown-menu {
+    margin: 1vw;
+    display: grid;
+}
+
+.dropdown-menu label {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.dropdown-menu select {
+    font-size: 0.8em;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.filterMenu input[type=checkbox] {
+    transform: scale(1.5);
+    bottom: .08em;
+    position: relative;
+    vertical-align: middle;
+}
+
+.filterMenu h3 {
+    text-align: center;
+    background-color: #22AAFB;
+    width: 100%;
+}
+
+.categorySelector {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+}
+
+.islandSelector {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+}
+
+.costSelector {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.scoreSelector {
+    grid-column: 4;
+    grid-row: 1;
+    text-align: center;
+}
+
+.submitBtn {
+    grid-column: 3 / span 2;
+    grid-row: 2;
+    margin: 4em 8vw;
+}
+
+.mainSection {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    float: left;
+    text-align: unset;
+    display: inline;
+    width: 80vw;
+    position: center;
+}
+
+.articleResumeLong img {
+    background-color: grey;
+    padding: 5vw;
+    margin-right: 1em;
+    float: left;
+}
+
+.articleResumeLong p {
+    text-align: justify;
+    font-size: 1.6em;
+    margin: .5em 0 .5em .5em;
+}
+
+.articleResumeLong h2 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.articleResumeLong {
+    text-align: left;
+    width: 80vw;
+    padding: 2em;
+    display: block;
+    margin: 0;
+    float: none;
+}
+
+.carousel {
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel img {
+    text-align: center;
+    background-color: grey;
+    width: 100vw;
+    display: block;
+}
+
+.carousel .next, .prev {
+    position: absolute;
+    top: 40%;
+    font-size: 2.5em;
+    color: white;
+    padding: 0.5em;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.next:hover, .prev:hover {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.carousel .next {
+    right: 0;
+    border-bottom-left-radius: 0.5em;
+    border-top-left-radius: 0.5em;
+}
+
+.carousel .prev {
+    border-bottom-right-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+}
+
+.carouselItem div {
+    position: absolute;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 33vh;
+    padding-top: 0.5em;
+    padding-left: 1em;
+    width: 60%
+}
+
+article.articleResumeSmall {
+    width: 25vw;
+    font-size: 1em;
+}
+
+.articleResume {
+    font-size: 1.5em;
+    float: left;
+    width: 60vw;
+    margin-top: 3vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    padding: 0.5vw;
+}
+
+.articleResume:hover {
+    background-color: #FFD511;
+}
+
+.articleResume img {
+    width: 100%;
+}
+
+.profileInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3em;
+}
+
+.profilePicture {
+    display: block;
+    width: 25vw;
+    height: 25vw;
+    line-height: 25vw;
+    text-align: center;
+    background-color: grey;
+    border-radius: 25vw;
+}
+
+.profileInfo h1 {
+    text-align: center;
+}
+
+.profileDetails {
+    display: grid;
+    gap: 2em;
+    border: 1px solid black;
+    padding: 2em;
+}
+
+.profilePictureSmall {
+    width: 10vw;
+    height: 10vw;
+    line-height: 10vw;
+    border-radius: 10vw;
+    margin: 2em;
+    float: left;
+}
+
+.favorites {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.favorites h1 {
+    font-size: 2em;
+    margin: 2em;
+    align-self: flex-start;
 }
