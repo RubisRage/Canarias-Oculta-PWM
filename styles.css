@@ -29,7 +29,7 @@ main {
     position: relative;
 }
 
-aside {
+.mainIslandPage > aside {
     border: 5px solid green;
     float: left;
     display: block;
@@ -41,7 +41,7 @@ aside {
     position: absolute;
 }
 
-article {
+.mainIslandPage > article {
     border: 5px solid fuchsia;
     text-align: center;
     height: 70%;
@@ -52,7 +52,7 @@ article {
     float: right;
 }
 
-section {
+.shortArticle > section {
     text-align: center;
     display: inline;
     float: right;
