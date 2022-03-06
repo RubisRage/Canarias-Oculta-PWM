@@ -342,6 +342,8 @@ article.articleResumeSmall {
 
 .articleResume img {
     width: 100%;
+}
+
 .profileInfo {
     display: flex;
     flex-direction: column;
