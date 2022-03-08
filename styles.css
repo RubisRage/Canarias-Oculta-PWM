@@ -2,7 +2,14 @@
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
-    src: local('Montserrat'), url('/fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+    src: url('fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Permanent Marker";
+    font-style: normal;
+    font-weight: normal;
+    src: url('fonts/Permanent_Marker/PermanentMarker-Regular.ttf') format('truetype');
 }
 
 body {
@@ -25,6 +32,15 @@ main {
     position: relative;
 }
 
+button {
+    border:0;
+    background-color:#FFD511;
+    border-radius:0.2em;
+}
+
+article > h1,h2 {
+    font-family: "Permanent Marker", cursive;
+}
 
 .verticalNavBar {
     border: 0.1vw solid black;
@@ -334,7 +350,7 @@ footer {
     position: absolute;
     color: white;
     background-color: rgba(0, 0, 0, 0.6);
-    top: 33vh;
+    top: 19.758vw;
     padding-top: 0.5em;
     padding-left: 1em;
     width: 60%
