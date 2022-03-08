@@ -38,6 +38,10 @@ button {
     border-radius:0.2em;
 }
 
+button:hover {
+    cursor:pointer;
+}
+
 article > h1,h2 {
     font-family: "Permanent Marker", cursive;
 }
