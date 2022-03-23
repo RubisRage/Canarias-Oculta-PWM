@@ -1,16 +1,26 @@
 $(document).ready(function(){
-    var title;
-    var content;
-    $.getJSON("assets/test.json", function (data) {
-        title=data.title;
-        content=data.content;
+    var username;
+    var profilePicture;
+    $.getJSON('assets/userTest.json', function (data) {
+        username=data.username;
+        profilePicture=data.profilePicture;
     });
-    $("title").text(title);
+    $("title").text(username);
     $("#header").load('assets/navbar.html');
-    $("#article").load('assets/articlePage.html', function () {
-        $(".longArticle h1").text(title);
-        $("#imgLongArticle").attr("src","https://dam.ngenespanol.com/wp-content/uploads/2019/06/montana-perfecta_Matterhorn_-770x395.png");
-        $(".longArticle p").text(content);
+    $("#userCard").load('assets/UserCard.html', function () {
+        $(".userCard").children("h1").text(username);
+        $(".userCard").children("img").attr("src", profilePicture);
+    });
+    $.getJSON('assets/longTest.json', function(data) {
+        $.each(data, function (key, val) {
+            $("#articles").append("<article></article>");
+            $("#articles article").last().load('assets/articleSummary.html', function () {
+                $(".articleResumeLong").last().children("h2").text(val.title);
+                $(".articleResumeLong").last().children("p").text(val.content.slice(0,300)+"...");
+                $(".articleResumeLong").last().children("img").attr("src", val.imageURL);
+                $(".articleResumeLong").last().children("img").attr("alt", val.altText);
+            });
+        })
     });
     $("#footer").load('assets/footerTestHTML.html');
 });

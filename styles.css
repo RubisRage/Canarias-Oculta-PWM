@@ -288,9 +288,10 @@ footer {
 
 .articleResumeLong img {
     background-color: grey;
-    padding: 5vw;
+    /*padding: 5vw;*/
     margin-right: 1em;
     float: left;
+    height: 12em;
 }
 
 .articleResumeLong p {
@@ -311,6 +312,10 @@ footer {
     display: block;
     margin: 0;
     float: none;
+}
+
+.articleResumeLong:hover {
+    cursor:pointer;
 }
 
 
@@ -376,6 +381,7 @@ article.articleResumeSmall {
 }
 
 .articleResume:hover {
+    cursor:pointer;
     background-color: #FFD511;
 }
 
