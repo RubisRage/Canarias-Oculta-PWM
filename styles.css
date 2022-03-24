@@ -182,6 +182,8 @@ footer {
     clear: both;
     display: table;
     text-align: center;
+    margin: 1%;
+    padding: 1%;
 }
 
 .longArticle > p {
