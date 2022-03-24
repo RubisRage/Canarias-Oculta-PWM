@@ -117,12 +117,12 @@ footer {
     Light yellow: #FFD511
 */
 
-.navbar {
+.navbar-p {
     overflow: hidden;
     background-color: #0077C8;
 }
 
-.navbar a {
+.navbar-p a {
     float: left;
     font-size: 16px;
     color: white;
@@ -136,7 +136,7 @@ footer {
     overflow: hidden;
 }
 
-.dropdown .dropbtn {
+.dropdown-p .dropbtn {
     font-size: 16px;
     border: none;
     outline: none;
@@ -147,7 +147,7 @@ footer {
     margin: 0;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn {
+.navbar-p a:hover, .dropdown-p:hover .dropbtn {
     background-color: #006bb4;
 }
 
@@ -173,7 +173,7 @@ footer {
     background-color: #ddd;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown-p:hover .dropdown-content {
     display: block;
 }
 
