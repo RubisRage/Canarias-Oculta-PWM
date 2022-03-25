@@ -72,13 +72,13 @@ aside ul {
     float: right;
 }
 
-.shortArticle > section {
+. section {
     text-align: center;
     display: inline;
     float: right;
     width: 19%;
-    margin-right: 2em;
-    padding: 1em;
+    margin-right: 5em;
+    padding: 5em;
     position: center;
     border: 5px solid blue;
 }
@@ -104,6 +104,10 @@ footer {
     border-radius: 15px;
     max-width: 50%;
 
+}
+
+.section > h3 {
+    font-size: 0.1em;
 }
 
 #imgHeader {
@@ -378,6 +382,16 @@ article.articleResumeSmall {
 }
 
 .articleResume:hover {
+    background-color: #FFD511;
+}
+
+
+.shortArticle:hover {
+    background-color: #FFD511;
+
+}
+
+.sectionIslandPage:hover {
     background-color: #FFD511;
 }
 
