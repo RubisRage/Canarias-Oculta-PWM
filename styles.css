@@ -381,17 +381,10 @@ article.articleResumeSmall {
     padding: 0.5vw;
 }
 
-.articleResume:hover {
-    background-color: #FFD511;
-}
-
-
-.shortArticle:hover {
-    background-color: #FFD511;
-
-}
-
-.sectionIslandPage:hover {
+.articleResume:hover,
+.shortArticle:hover,
+.sectionIslandPage:hover,
+.card:hover {
     background-color: #FFD511;
 }
 
