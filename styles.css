@@ -72,13 +72,13 @@ aside ul {
     float: right;
 }
 
-.shortArticle > section {
+. section {
     text-align: center;
     display: inline;
     float: right;
     width: 19%;
-    margin-right: 2em;
-    padding: 1em;
+    margin-right: 5em;
+    padding: 5em;
     position: center;
     border: 5px solid blue;
 }
@@ -106,6 +106,10 @@ footer {
 
 }
 
+.section > h3 {
+    font-size: 0.1em;
+}
+
 #imgHeader {
     width: 100vw;
 }
@@ -117,12 +121,12 @@ footer {
     Light yellow: #FFD511
 */
 
-.navbar {
+.navbar-p {
     overflow: hidden;
     background-color: #0077C8;
 }
 
-.navbar a {
+.navbar-p a {
     float: left;
     font-size: 16px;
     color: white;
@@ -136,7 +140,7 @@ footer {
     overflow: hidden;
 }
 
-.dropdown .dropbtn {
+.dropdown-p .dropbtn {
     font-size: 16px;
     border: none;
     outline: none;
@@ -147,7 +151,7 @@ footer {
     margin: 0;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn {
+.navbar-p a:hover, .dropdown-p:hover .dropbtn {
     background-color: #006bb4;
 }
 
@@ -173,7 +177,7 @@ footer {
     background-color: #ddd;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown-p:hover .dropdown-content {
     display: block;
 }
 
@@ -182,6 +186,8 @@ footer {
     clear: both;
     display: table;
     text-align: center;
+    margin: 1%;
+    padding: 1%;
 }
 
 .longArticle > p {
@@ -273,6 +279,7 @@ footer {
     grid-column: 3 / span 2;
     grid-row: 2;
     margin: 4em 8vw;
+    margin-top: 1em;
 }
 
 .mainSection {
@@ -288,10 +295,9 @@ footer {
 
 .articleResumeLong img {
     background-color: grey;
-    /*padding: 5vw;*/
+    padding: 5vw;
     margin-right: 1em;
     float: left;
-    height: 12em;
 }
 
 .articleResumeLong p {
@@ -312,10 +318,6 @@ footer {
     display: block;
     margin: 0;
     float: none;
-}
-
-.articleResumeLong:hover {
-    cursor:pointer;
 }
 
 
@@ -380,8 +382,10 @@ article.articleResumeSmall {
     padding: 0.5vw;
 }
 
-.articleResume:hover {
-    cursor:pointer;
+.articleResume:hover,
+.shortArticle:hover,
+.sectionIslandPage:hover,
+.card:hover {
     background-color: #FFD511;
 }
 
@@ -398,12 +402,15 @@ article.articleResumeSmall {
 
 .profilePicture {
     display: block;
-    width: 25vw;
-    height: 25vw;
+    width: 15vw;
+    height: 15vw;
     line-height: 25vw;
     text-align: center;
+    font-size: 0.8em;
     background-color: grey;
     border-radius: 25vw;
+    margin: 4em 8vw;
+    margin-bottom: 0;
 }
 
 .profileInfo h1 {
@@ -436,4 +443,33 @@ article.articleResumeSmall {
     font-size: 2em;
     margin: 2em;
     align-self: flex-start;
+}
+
+.userDataProfile {
+    text-align: center;
+    display: inline;
+}
+
+.btn-search{
+    display: none;
+}
+
+.textOverlay {
+    position: absolute;
+    color: white;
+    margin-top: 1%;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 16vw;
+    padding-top: 0.5em;
+    padding-left: 1em;
+    width: 60%;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.textOverlay > h2{
+    font-size: large;
+}
+.textOverlay > p {
+    font-size: medium;
+    padding-right: 1%;
 }

@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Canarias Oculta | Búsqueda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" type="text/css" href="responsive.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap-sidebars.min.css">
 </head>
 <body>
 <header>
-    <img id="imgHeader" src="images/headerImage.jpg">
+    <img id="imgHeader" src="images/headerImage.jpg" alt="Header Image">
 </header>
-<div class="navbar">
+<div class="navbar-p">
     <a href="index.html">Logo</a>
     <a style="float:right" href="userProfile.html">Usuario</a>
-    <div style="float:right" class="dropdown">
+    <div style="float:right" class="dropdown-p">
         <button class="dropbtn">Islas
             <i class="fa fa-caret-down"></i>
         </button>
@@ -32,7 +34,7 @@
 
 
 <main>
-    <aside class="verticalNavBar">
+    <aside class="verticalNavBar aside-search">
         <h4>Categorías</h4>
         <ul>
             <li><a href="SearchPage.html">Montaña</a></li>
@@ -54,111 +56,204 @@
 
     </aside>
     <section class="mainSection">
-        <form class="searchForm">
-            <div class="filterMenu categorySelector">
-
-                <h3>Categoría</h3>
-                <ul>
-                    <li><label><input type="checkbox">Gastronomía</label></li>
-                    <li><label><input type="checkbox">Playa</label></li>
-                    <li><label><input type="checkbox">Senderismo</label></li>
-                    <li><label><input type="checkbox">Montaña</label></li>
-                </ul>
-            </div>
-            <div class="filterMenu islandSelector">
-                <h3>Islas</h3>
-                <ul>
-                    <li><label><input type="checkbox">El Hierro</label></li>
-                    <li><label><input type="checkbox">La Palma</label></li>
-                    <li><label><input type="checkbox">La Gomera</label></li>
-                    <li><label><input type="checkbox">Tenerife</label></li>
-                    <li><label><input type="checkbox">Gran Canaria</label></li>
-                    <li><label><input type="checkbox">Lanzarote</label></li>
-                    <li><label><input type="checkbox">Fuerteventura</label></li>
-                    <li><label><input type="checkbox">La Graciosa</label></li>
-                </ul>
-            </div>
-
-            <div class="filterMenu costSelector">
-                <h3>Coste</h3>
-
-                <div class="dropdown-menu">
-                    <label>Desde:</label>
-                    <select>
-                        <option value="0">0 €</option>
-                        <option value="10">10 €</option>
-                        <option value="20">20 €</option>
-                        <option value="30">30 €</option>
-                        <option value="40">40 €</option>
-                        <option value="50">50 € o más</option>
-                    </select>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="flex-shrink-0 p-3 bg-white menu-filter-medium" style="width: 280px;">
+                        <ul class="list-unstyled ps-0">
+                            <li class="mb-1">
+                                <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#category-collapse" aria-expanded="true">
+                                    Categoría
+                                </button>
+                                <div class="collapse show" id="category-collapse">
+                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                        <li><label><input type="checkbox">Gastronomía</label></li>
+                                        <li><label><input type="checkbox">Playa</label></li>
+                                        <li><label><input type="checkbox">Senderismo</label></li>
+                                        <li><label><input type="checkbox">Montaña</label></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="mb-1">
+                                <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#island-collapse" aria-expanded="false">
+                                    Islas
+                                </button>
+                                <div class="collapse" id="island-collapse">
+                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                        <li><label><input type="checkbox">El Hierro</label></li>
+                                        <li><label><input type="checkbox">La Palma</label></li>
+                                        <li><label><input type="checkbox">La Gomera</label></li>
+                                        <li><label><input type="checkbox">Tenerife</label></li>
+                                        <li><label><input type="checkbox">Gran Canaria</label></li>
+                                        <li><label><input type="checkbox">Lanzarote</label></li>
+                                        <li><label><input type="checkbox">Fuerteventura</label></li>
+                                        <li><label><input type="checkbox">La Graciosa</label></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="mb-1">
+                                <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#price-collapse" aria-expanded="false">
+                                    Coste
+                                </button>
+                                <div class="collapse" id="price-collapse">
+                                    <label>Desde:</label>
+                                    <select>
+                                        <option value="0">0 €</option>
+                                        <option value="10">10 €</option>
+                                        <option value="20">20 €</option>
+                                        <option value="30">30 €</option>
+                                        <option value="40">40 €</option>
+                                        <option value="50">50 € o más</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li class="mb-1">
+                                <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#rating-collapse" aria-expanded="false">
+                                    Valoración
+                                </button>
+                                <div class="collapse" id="rating-collapse">
+                                    <select>
+                                        <option value="0">0 estrellas</option>
+                                        <option value="1">1 estrellas</option>
+                                        <option value="2">2 estrellas</option>
+                                        <option value="3">3 estrellas</option>
+                                        <option value="4">4 estrellas</option>
+                                        <option value="5">5 estrellas</option>
+                                    </select>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-
-                <div class="dropdown-menu">
-                    <label>Hasta:</label>
-                    <select>
-                        <option value="0">0 €</option>
-                        <option value="10">10 €</option>
-                        <option value="20">20 €</option>
-                        <option value="30">30 €</option>
-                        <option value="40">40 €</option>
-                        <option value="50">50 € o más</option>
-                    </select>
+                <div class="col-md-9 col-lg-12">
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-5">
+                        <div class="col">
+                            <article onclick="location.href='articlePage.html';" class="card">
+                                <img src="https://i.picsum.photos/id/10/2500/1667.jpg?hmac=J04WWC_ebchx3WwzbM-Z4_KC_LeLBWr5LZMaAkWkF68" alt="Article Image" class="card-img-top">
+                                <div class="card-body">
+                                    <h2 class="card-title">Título</h2>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                        deserunt mollit anim id est laborum.</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col">
+                            <article onclick="location.href='articlePage.html';" class="card">
+                                <img src="https://i.picsum.photos/id/10/2500/1667.jpg?hmac=J04WWC_ebchx3WwzbM-Z4_KC_LeLBWr5LZMaAkWkF68" alt="Article Image" class="card-img-top">
+                                <div class="card-body">
+                                    <h2 class="card-title">Título</h2>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                        deserunt mollit anim id est laborum.</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col">
+                            <article onclick="location.href='articlePage.html';" class="card">
+                                <img src="https://i.picsum.photos/id/10/2500/1667.jpg?hmac=J04WWC_ebchx3WwzbM-Z4_KC_LeLBWr5LZMaAkWkF68" alt="Article Image" class="card-img-top">
+                                <div class="card-body">
+                                    <h2 class="card-title">Título</h2>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                        deserunt mollit anim id est laborum.</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col">
+                            <article onclick="location.href='articlePage.html';" class="card">
+                                <img src="https://i.picsum.photos/id/10/2500/1667.jpg?hmac=J04WWC_ebchx3WwzbM-Z4_KC_LeLBWr5LZMaAkWkF68" alt="Article Image" class="card-img-top">
+                                <div class="card-body">
+                                    <h2 class="card-title">Título</h2>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                        deserunt mollit anim id est laborum.</p>
+                                </div>
+                            </article>
+                        </div>
                 </div>
             </div>
-
-            <div class="filterMenu scoreSelector">
-                <h3>Valoración</h3>
-                <select>
-                    <option value="0">0 estrellas</option>
-                    <option value="1">1 estrellas</option>
-                    <option value="2">2 estrellas</option>
-                    <option value="3">3 estrellas</option>
-                    <option value="4">4 estrellas</option>
-                    <option value="5">5 estrellas</option>
-                </select>
-            </div>
-            <div class="flexBreak"></div>
-            <button class="submitBtn" type="submit">Buscar</button>
-        </form>
-
-        <article onclick="location.href='articlePage.html';" class="articleResumeLong">
-            <img src="#" alt="Article Image">
-            <h2>Título</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.</p>
-        </article>
-        <article onclick="location.href='articlePage.html';" class="articleResumeLong">
-            <img src="#" alt="Article Image">
-            <h2>Título</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.</p>
-        </article>
-        <article onclick="location.href='articlePage.html';" class="articleResumeLong">
-            <img src="#" alt="Article Image">
-            <h2>Título</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.</p>
-        </article>
-        <article onclick="location.href='articlePage.html';" class="articleResumeLong">
-            <img src="#" alt="Article Image">
-            <h2>Título</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.</p>
-        </article>
+        </div>
+        </div>
     </section>
+        <!--
+        <form class="searchForm">
+                        <div class="filterMenu categorySelector">
+
+                            <h3>Categoría</h3>
+                            <ul>
+                                <li><label><input type="checkbox">Gastronomía</label></li>
+                                <li><label><input type="checkbox">Playa</label></li>
+                                <li><label><input type="checkbox">Senderismo</label></li>
+                                <li><label><input type="checkbox">Montaña</label></li>
+                            </ul>
+                        </div>
+                        <div class="filterMenu islandSelector">
+                            <h3>Islas</h3>
+                            <ul>
+                                <li><label><input type="checkbox">El Hierro</label></li>
+                                <li><label><input type="checkbox">La Palma</label></li>
+                                <li><label><input type="checkbox">La Gomera</label></li>
+                                <li><label><input type="checkbox">Tenerife</label></li>
+                                <li><label><input type="checkbox">Gran Canaria</label></li>
+                                <li><label><input type="checkbox">Lanzarote</label></li>
+                                <li><label><input type="checkbox">Fuerteventura</label></li>
+                                <li><label><input type="checkbox">La Graciosa</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="filterMenu costSelector">
+                            <h3>Coste</h3>
+
+                            <div class="dropdown-menu">
+                                <label>Desde:</label>
+                                <select>
+                                    <option value="0">0 €</option>
+                                    <option value="10">10 €</option>
+                                    <option value="20">20 €</option>
+                                    <option value="30">30 €</option>
+                                    <option value="40">40 €</option>
+                                    <option value="50">50 € o más</option>
+                                </select>
+                            </div>
+
+                            <div class="dropdown-menu">
+                                <label>Hasta:</label>
+                                <select>
+                                    <option value="0">0 €</option>
+                                    <option value="10">10 €</option>
+                                    <option value="20">20 €</option>
+                                    <option value="30">30 €</option>
+                                    <option value="40">40 €</option>
+                                    <option value="50">50 € o más</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="filterMenu scoreSelector">
+                            <h3>Valoración</h3>
+                            <select>
+                                <option value="0">0 estrellas</option>
+                                <option value="1">1 estrellas</option>
+                                <option value="2">2 estrellas</option>
+                                <option value="3">3 estrellas</option>
+                                <option value="4">4 estrellas</option>
+                                <option value="5">5 estrellas</option>
+                            </select>
+                        </div>
+                        <div class="flexBreak"></div>
+                        <button class="submitBtn" type="submit">Buscar</button>
+                    </form>
+                    -->
+
 </main>
 
 <footer>
@@ -186,6 +281,7 @@
     </div>
 
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </body>
 </html>

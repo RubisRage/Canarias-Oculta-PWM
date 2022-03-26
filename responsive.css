@@ -1,5 +1,187 @@
-@media screen and (max-width: 40em) {
+@media screen and (max-width: 768px) {
+    header{
+        display: none;
+    }
     .verticalNavBar {
+        display: none;
+    }
+
+    .btn-search { display: inline}
+
+    .textOverlay{
+        display: none;
+    }
+
+    .main-container{
+        display: none;
+    }
+
+    .longArticle > p {
+        text-align: center;
+    }
+
+    .longArticle > img {
+        margin: 2em;
+        border-radius: 15px;
+        float: top;
+        width: 85%;
+    }
+
+    footer {
+        font-size: 0.3em;
+
+    }
+
+    footer > div > h3 {
+        font-size: 2em;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px){
+    header {
+        display: none;
+    }
+
+    .verticalNavBar {
+        border: none;
+    }
+
+    .aside-search{
+        display: none;
+    }
+
+    .searchForm {
+        font-size: 0.5em;
+        padding-left: 0.5%;
+    }
+
+    .searchForm h3 {
+        font-size: 0.8em;
+    }
+
+    .searchForm label {
+        font-size: 0.8em;
+        padding-right: 0.5%;
+    }
+
+    .main-container {
+        display: grid;
+        grid-template-columns: 0.5fr 1.5fr;
+        height: 100vh;
+    }
+
+    .half-left {
+        width: 100%;
+        height: 100%;
+        margin: 2% 2%;
+        padding: 2%;
+    }
+
+    .half-right {
+        width: 100%;
+        height: 100%;
+        margin: 2% 2%;
+        padding: 2%;
+    }
+
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .textOverlay {
+        position: absolute;
+        color: white;
+        margin-top: 1%;
+        background-color: rgba(0, 0, 0, 0.6);
+        top: 16vw;
+        padding-top: 0.5em;
+        padding-left: 1em;
+        width: 60%;
+        border-radius: 0px 20px 20px 0px;
+    }
+
+    .textOverlay > h2{
+        font-size: x-small;
+    }
+    .textOverlay > p {
+        font-size: xx-small;
+        padding-right: 1%;
+    }
+    .carousel-control-prev {
+        max-width: 70px;
+    }
+
+    .carousel-control-next {
+        max-width: 70px;
+    }
+
+
+    .container {
+        margin: 0;
+        padding: 1%;
+        max-width: 100%;
+    }
+
+    .articleResume {
+        margin: 0;
+        max-width: 15em;
+        max-height: 20em;
+    }
+
+    .articleResume > img{
+        max-width: 15em;
+        border: 0;
+    }
+
+    .articleResume:hover{
+        max-height: 100%;
+    }
+
+    .articleResume > h1{
+        font-size: 0.8em;
+    }
+
+    .articleResume > h2{
+        font-size: 0.8em;
+    }
+
+    .articleResume > p{
+        font-size: 0.5em;
+    }
+
+    footer {
+        font-size: 0.5em;
+
+    }
+
+    footer > div > h3 {
+        font-size: 2em;
+    }
+
+    .imgLongArticle {
+        width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+@media screen and (min-width: 993px) {
+    .carousel-control-prev {
+        max-width: 70px;
+    }
+
+    .carousel-control-next {
+        max-width: 70px;
+    }
+
+    .container{
+        margin: 2%;
+    }
+
+    .menu-filter-medium {
         display: none;
     }
 }
