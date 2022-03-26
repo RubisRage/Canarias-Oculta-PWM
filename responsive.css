@@ -10,6 +10,18 @@
     .main-container{
         display: none;
     }
+
+    .longArticle > p {
+        text-align: center;
+    }
+
+    .longArticle > img {
+        margin: 2em;
+        border-radius: 15px;
+        float: top;
+        width: 85%;
+    }
+
     footer {
         font-size: 0.3em;
 
