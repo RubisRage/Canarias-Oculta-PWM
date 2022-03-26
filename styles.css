@@ -279,6 +279,7 @@ footer {
     grid-column: 3 / span 2;
     grid-row: 2;
     margin: 4em 8vw;
+    margin-top: 1em;
 }
 
 .mainSection {
@@ -401,12 +402,15 @@ article.articleResumeSmall {
 
 .profilePicture {
     display: block;
-    width: 25vw;
-    height: 25vw;
+    width: 15vw;
+    height: 15vw;
     line-height: 25vw;
     text-align: center;
+    font-size: 0.8em;
     background-color: grey;
     border-radius: 25vw;
+    margin: 4em 8vw;
+    margin-bottom: 0;
 }
 
 .profileInfo h1 {
