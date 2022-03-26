@@ -450,6 +450,11 @@ article.articleResumeSmall {
     display: inline;
 }
 
+.btn-edit-profile {
+    margin-left: 35%;
+    float: left;
+}
+
 .btn-search{
     display: none;
 }

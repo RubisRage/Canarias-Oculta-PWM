@@ -184,4 +184,12 @@
     .menu-filter-medium {
         display: none;
     }
+
+    .container-edit-profile {
+        height: 65vh;
+    }
+
+    #btn-cancel-profile {
+        display: none;
+    }
 }
