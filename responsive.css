@@ -167,3 +167,17 @@
     }
 
 }
+
+@media screen and (min-width: 993px) {
+    .carousel-control-prev {
+        max-width: 70px;
+    }
+
+    .carousel-control-next {
+        max-width: 70px;
+    }
+
+    .container{
+        margin: 2%;
+    }
+}

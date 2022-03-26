@@ -453,3 +453,23 @@ article.articleResumeSmall {
 .btn-search{
     display: none;
 }
+
+.textOverlay {
+    position: absolute;
+    color: white;
+    margin-top: 1%;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 16vw;
+    padding-top: 0.5em;
+    padding-left: 1em;
+    width: 60%;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.textOverlay > h2{
+    font-size: large;
+}
+.textOverlay > p {
+    font-size: medium;
+    padding-right: 1%;
+}
