@@ -2,6 +2,22 @@
     .verticalNavBar {
         display: none;
     }
+
+    .textOverlay{
+        display: none;
+    }
+
+    .main-container{
+        display: none;
+    }
+    footer {
+        font-size: 0.3em;
+
+    }
+
+    footer > div > h3 {
+        font-size: 2em;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px){
