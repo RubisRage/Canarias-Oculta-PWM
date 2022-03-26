@@ -1,7 +1,12 @@
 @media screen and (max-width: 768px) {
+    header{
+        display: none;
+    }
     .verticalNavBar {
         display: none;
     }
+
+    .btn-search { display: inline}
 
     .textOverlay{
         display: none;
