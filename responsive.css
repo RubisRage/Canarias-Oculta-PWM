@@ -180,4 +180,8 @@
     .container{
         margin: 2%;
     }
+
+    .menu-filter-medium {
+        display: none;
+    }
 }
