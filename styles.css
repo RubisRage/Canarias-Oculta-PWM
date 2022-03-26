@@ -449,3 +449,7 @@ article.articleResumeSmall {
     text-align: center;
     display: inline;
 }
+
+.btn-search{
+    display: none;
+}
