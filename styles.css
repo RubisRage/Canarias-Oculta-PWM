@@ -444,3 +444,8 @@ article.articleResumeSmall {
     margin: 2em;
     align-self: flex-start;
 }
+
+.userDataProfile {
+    text-align: center;
+    display: inline;
+}
