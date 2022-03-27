@@ -10,17 +10,14 @@
 
 <script>  
     function matchPassword() {  
-      var pw1 = document.getElementById("pswd1");  
-      var pw2 = document.getElementById("pswd2");  
+      var pw1 = document.getElementById("pswd1").value;  
+      var pw2 = document.getElementById("pswdRepeat").value;  
       if(pw1 != pw2)  
       {   
         alert("Las contraseñas no coinciden");  
-      } else {  
-        alert("Se ha creado su contraseña");  
-      }  
+      }
     }  
-</script>  
-
+</script>
 
 <body>
     <div class="navbar-p">
@@ -45,11 +42,11 @@
 
     <form>  
         <h3>Creación de un usuario</h3>  
-        <input placeholder="Usuario" type="username" name="user" ><br><br>
+        <input placeholder="Usuario" type="username" name="user"><br><br>
 
-        <input placeholder="Contraseña" minlength="8" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" name = "pswd1"> <br><br>  
+        <input id="pswd1" placeholder="Contraseña" minlength="8" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" name="pswd1"> <br><br>  
           
-        <input placeholder="Confirme contraseña" minlength="8" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" name = "pswd2"> <br><br>  
+        <input id="pswdRepeat" placeholder="Confirme contraseña" minlength="8" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" name="pswd2"> <br><br>  
           
         <button type="submit" onclick="matchPassword()">Submit</button>  
           
