@@ -8,8 +8,8 @@ $(document).ready(function(){
                 if (i > carouselArticles) {return;}
                 $(".carousel-inner").append("<article></article>");
                 $("article").last().load('assets/carouselItem.html', function () {
-                    $(".carousel-item").last().children("h2").text(val.title);
-                    $(".carousel-item").last().children("p").text(val.content.slice(0, 300) + "...");
+                    $(".textOverlay").last().children("h2").text(val.title);
+                    $(".textOverlay").last().children("p").text(val.content.slice(0, 300) + "...");
                     $(".carousel-item").last().children("img").attr("src", val.imageURL);
                     $(".carousel-item").last().children("img").attr("alt", val.altText);
                 });

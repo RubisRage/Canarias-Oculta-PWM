@@ -6,6 +6,7 @@ $(document).ready(function(){
         $("#shortArticle").load('assets/shortArticle.html', function () {
             $.each(data, function (key, val) {
                 if (first) {
+                    $(".shortArticle").children("h2").text(val.title);
                     $(".shortArticle").children("p").text(val.content.slice(0,300)+"...");
                     $(".imgLongArticle").children("img").attr("src", val.imageURL);
                     $(".imgLongArticle").children("img").attr("alt", val.altText);
