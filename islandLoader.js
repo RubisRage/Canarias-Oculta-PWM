@@ -6,9 +6,9 @@ $(document).ready(function(){
         $("#shortArticle").load('assets/shortArticle.html', function () {
             $.each(data, function (key, val) {
                 if (first) {
-                        $(".shortArticle").children("p").text(val.content.slice(0,300)+"...");
-                        $(".shortArticle").children("img").attr("src", val.imageURL);
-                        $(".shortArticle").children("img").attr("alt", val.altText);
+                    $(".shortArticle").children("p").text(val.content.slice(0,300)+"...");
+                    $(".imgLongArticle").children("img").attr("src", val.imageURL);
+                    $(".imgLongArticle").children("img").attr("alt", val.altText);
                     first = false;
                 } else {
                     $("#sections").append("<div class='col'></div>");

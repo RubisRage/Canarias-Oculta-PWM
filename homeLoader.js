@@ -20,21 +20,40 @@ $(document).ready(function(){
     $.getJSON('assets/longTest.json', function(data) {
         i=1
         $.each(data, function (key, val) {
-            $("main").append("<article></article>");
-            if (i==carouselArticles+1) {
-                $("main article").last().load('assets/articleResume.html', function () {
-                    $(".articleResume").last().children("h1").text(val.title);
-                    $(".articleResume").last().children("p").text(val.content.slice(0,300)+"...");
-                    $(".articleResume").last().children("img").attr("src", val.imageURL);
-                    $(".articleResume").last().children("img").attr("alt", val.altText);
-                });
-            } else if (i>carouselArticles+1) {
-                $("main article").last().load('assets/articleResumeSmall.html', function () {
-                    $(".articleResumeSmall").last().children("h1").text(val.title);
-                    $(".articleResumeSmall").last().children("p").text(val.content.slice(0,200)+"...");
-                    $(".articleResumeSmall").last().children("img").attr("src", val.imageURL);
-                    $(".articleResumeSmall").last().children("img").attr("alt", val.altText);
-                });
+            if (i>=carouselArticles+1) {
+                if (i==carouselArticles+1) {
+                    $("#important").load('assets/articleCard.html', function () {
+                        $(".card div").last().children("h2").text(val.title);
+                        $(".card div").last().children("p").text(val.content.slice(0,300)+"...");
+                        $(".card").last().children("img").attr("src", val.imageURL);
+                        $(".card").last().children("img").attr("alt", val.altText);
+                    });
+                }
+                if (i==carouselArticles+2) {
+                    $("#side1").load('assets/articleCard.html', function () {
+                        $(".card div").last().children("h2").text(val.title);
+                        $(".card div").last().children("p").text(val.content.slice(0,300)+"...");
+                        $(".card").last().children("img").attr("src", val.imageURL);
+                        $(".card").last().children("img").attr("alt", val.altText);
+                    });
+                }
+                if (i==carouselArticles+3) {
+                    $("#side2").load('assets/articleCard.html', function () {
+                        $(".card div").last().children("h2").text(val.title);
+                        $(".card div").last().children("p").text(val.content.slice(0,300)+"...");
+                        $(".card").last().children("img").attr("src", val.imageURL);
+                        $(".card").last().children("img").attr("alt", val.altText);
+                    });
+                }
+                if (i>=carouselArticles+3) {
+                    $("#additional").append("<div class='col'></div>");
+                    $("#additional").children(".col").last().load('assets/articleCard.html', function () {
+                        $(".card div").last().children("h2").text(val.title);
+                        $(".card div").last().children("p").text(val.content.slice(0, 300) + "...");
+                        $(".card").last().children("img").attr("src", val.imageURL);
+                        $(".card").last().children("img").attr("alt", val.altText);
+                    });
+                }
             }
             i++;
         })
