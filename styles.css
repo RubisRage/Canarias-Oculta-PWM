@@ -324,6 +324,7 @@ footer {
 .carousel {
     overflow: hidden;
     position: relative;
+    height: 25vw;
 }
 
 .carousel img {
