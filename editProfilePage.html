@@ -6,7 +6,27 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" type="text/css" href="responsive.css">
+    <script>
+        function matchPassword() {
+            document.getElementById('pswd1')
+                .setCustomValidity('');
+            var password = document.getElementById("pswd1").value;
+            var passwordRepeat = document.getElementById("pswdRepeat").value;
+            if (document.getElementById("newUser").checkValidity()) {
+                if (password != passwordRepeat) {
+                    document.getElementById('pswd1')
+                        .setCustomValidity('Las contraseñas deben coincidir.');
+                } else {
+                    alert("Cambio de datos de usuario realizado con éxito.");
+                    window.localStorage.setItem("username", document.getElementById("newUserName").value);
+                    window.location.href="dynamicUser.html";
+                }
+            }
+        }
+
+    </script>
 </head>
+
 <body>
 <div class="navbar-p">
     <a href="dynamicHome.html">Logo</a>
@@ -36,34 +56,27 @@
         </div>
         <div class="col-md-8 col-lg-6">
             <h3>Datos de usuario</h3>
-            <form class="profileDetails">
-                <input type="text" placeholder="Username" id="userNameProfile">
-                <input type="password" placeholder="Password" id="userPassword">
-                <input type="password" placeholder="Repeat Password" id="userRepeatPassword">
-            </form>
-            <button class="submitBtn">Change</button>
+            <form id="newUser" action="dynamicUser.html">
+                <input id="newUserName" placeholder="Usuario" minlength="3" type="username" required name="user"><br><br>
+        
+                <input required id="pswd1" placeholder="Contraseña" minlength="8" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" name="pswd1"> <br><br>
+                  
+                <input required id="pswdRepeat" placeholder="Confirme contraseña" minlength="8" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" name="pswd2"> <br><br>
+                  
+                <button type="submit" onclick="matchPassword()">Submit</button>
+                  
+             </form>  
+              <div id="message">
+                <h3>Su contraseña debería contener lo siguiente: </h3>
+                <p id="letter" class="invalid">Una letra <b>en minúscula</b> </p>
+                <p id="capital" class="invalid">Una letra <b> en MAYÚSCULAS</b> </p>
+                <p id="number" class="invalid">Un <b>número</b></p>
+                <p id="length" class="invalid">Un mínimo de <b>8 caracteres</b></p>
+              </div>
             <button class="submitBtn" id="btn-cancel-profile">Cancel</button>
         </div>
     </div>
 </div>
-
-<!--<h1 style="margin: 1em">Edit profile</h1>
-
-<div class="profileInfo">
-    <img class="profilePicture" alt="Profile picture">
-    <button class="submitBtn">Change</button>
-    <form class="profileDetails">
-        <label style="grid-row: 1; grid-column: 1">Username</label><input type="text"
-                                                                          style="grid-row: 1; grid-column: 2">
-        <button style="grid-row: 1; grid-column: 3">Change</button>
-        <label style="grid-row: 2; grid-column: 1">Password</label><input type="text"
-                                                                          style="grid-row: 2; grid-column: 2">
-        <button style="grid-row:2; grid-column: 3">Change</button>
-    </form>
-
-    <button onclick="location.href='userProfile.html'" class="submitBtn">Return</button>
-</div>
--->
 
 <footer>
     <div>

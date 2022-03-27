@@ -1,8 +1,7 @@
 $(document).ready(function(){
-    var username;
+    var username = window.localStorage.getItem("username");
     var profilePicture;
     $.getJSON('assets/userTest.json', function (data) {
-        username=data.username;
         profilePicture=data.profilePicture;
     });
     $("title").text(username);

@@ -42,6 +42,10 @@ button:hover {
     cursor:pointer;
 }
 
+form {
+    padding-bottom: 2px;
+}
+
 article > h1,h2 {
     font-family: "Permanent Marker", cursive;
 }
@@ -72,7 +76,7 @@ aside ul {
     float: right;
 }
 
-. section {
+.section {
     text-align: center;
     display: inline;
     float: right;
